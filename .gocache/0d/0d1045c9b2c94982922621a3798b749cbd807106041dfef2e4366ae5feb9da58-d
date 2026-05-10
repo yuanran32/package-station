@@ -1,0 +1,12 @@
+./constants.go
+./coupon.go
+./delivery_record.go
+./migrate.go
+./notice.go
+./operation_log.go
+./parcel.go
+./payment_order.go
+./pickup_record.go
+./send_order.go
+./user.go
+./user_coupon.go
