@@ -2,8 +2,10 @@ import axios from 'axios'
 import { ElMessage } from 'element-plus'
 import { useAuthStore } from '../stores/auth'
 
+const baseURL = import.meta.env.VITE_API_BASE_URL || '/'
+
 const service = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || 'http://localhost:8080',
+  baseURL,
   timeout: 15000
 })
 
@@ -30,7 +32,10 @@ service.interceptors.response.use(
   },
   (error) => {
     const status = error.response?.status
-    const message = error.response?.data?.msg || error.message || '网络请求异常'
+    let message = error.response?.data?.msg || error.message || '网络请求异常'
+    if (!error.response) {
+      message = `网络连接失败，请检查后端服务与地址配置（baseURL: ${baseURL}）`
+    }
     if (status === 401) {
       const auth = useAuthStore()
       auth.logout()

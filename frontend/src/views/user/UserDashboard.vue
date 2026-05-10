@@ -25,7 +25,7 @@
 </template>
 
 <script setup>
-import { Box, CreditCard, Location, Tickets, Van } from '@element-plus/icons-vue'
+import { Box, CreditCard, Location, Money, Tickets, Van } from '@element-plus/icons-vue'
 
 const metrics = [
   { label: '待查询快递', value: '实时' },
@@ -38,6 +38,7 @@ const quickLinks = [
   { path: '/app/user/parcel', label: '查询快递', icon: Location },
   { path: '/app/user/history', label: '取件历史', icon: Box },
   { path: '/app/user/send-order', label: '寄件下单', icon: Van },
+  { path: '/app/user/pay-send', label: '寄件支付', icon: Money },
   { path: '/app/user/coupons', label: '我的礼券', icon: Tickets },
   { path: '/app/user/bills', label: '支付账单', icon: CreditCard }
 ]

@@ -3,7 +3,7 @@
     <div class="page-header">
       <div>
         <h2 class="page-title">管理首页</h2>
-        <p class="page-desc">处理入库、出库、寄件订单和通知发送。</p>
+        <p class="page-desc">处理入库、出库、寄件订单、红包礼券和通知发送。</p>
       </div>
     </div>
     <div class="metric-grid">
@@ -25,12 +25,13 @@
 </template>
 
 <script setup>
-import { Box, Collection, Document, Message, Van } from '@element-plus/icons-vue'
+import { Box, Collection, Document, Message, Tickets, Van } from '@element-plus/icons-vue'
 
 const metrics = [
   { label: '快递入库', value: '可处理' },
   { label: '出库核销', value: '可处理' },
   { label: '寄件订单', value: '待维护' },
+  { label: '红包礼券', value: '可配置' },
   { label: '通知发送', value: '在线' }
 ]
 
@@ -39,6 +40,7 @@ const quickLinks = [
   { path: '/app/admin/parcels', label: '快递列表', icon: Document },
   { path: '/app/admin/pickup', label: '取派件记录', icon: Collection },
   { path: '/app/admin/send-orders', label: '寄件订单', icon: Van },
+  { path: '/app/admin/coupons', label: '红包礼券设置', icon: Tickets },
   { path: '/app/admin/notices', label: '通知发送', icon: Message }
 ]
 </script>

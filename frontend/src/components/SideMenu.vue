@@ -21,6 +21,7 @@ import {
   HomeFilled,
   Location,
   Message,
+  Money,
   Postcard,
   Tickets,
   User,
@@ -43,6 +44,7 @@ const userMenus = [
   { path: '/app/user/history', label: '取件历史', icon: Collection },
   { path: '/app/user/identity', label: '身份码', icon: Postcard },
   { path: '/app/user/send-order', label: '寄件下单', icon: Van },
+  { path: '/app/user/pay-send', label: '寄件支付', icon: Money },
   { path: '/app/user/coupons', label: '红包礼券', icon: Tickets },
   { path: '/app/user/bills', label: '支付账单', icon: CreditCard },
   { path: '/app/user/notices', label: '通知提醒', icon: Bell }
@@ -55,6 +57,7 @@ const adminMenus = [
   { path: '/app/admin/outbound', label: '出库处理', icon: Location },
   { path: '/app/admin/pickup', label: '取派件记录', icon: Collection },
   { path: '/app/admin/send-orders', label: '寄件订单', icon: Van },
+  { path: '/app/admin/coupons', label: '红包礼券设置', icon: Tickets },
   { path: '/app/admin/notices', label: '通知发送', icon: Message }
 ]
 

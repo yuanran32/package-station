@@ -58,6 +58,12 @@ const routes = [
         meta: { role: 'user', title: '寄件下单' }
       },
       {
+        path: 'user/pay-send',
+        name: 'UserPaySend',
+        component: () => import('../views/user/BillsView.vue'),
+        meta: { role: 'user', title: '寄件支付' }
+      },
+      {
         path: 'user/coupons',
         name: 'UserCoupons',
         component: () => import('../views/user/CouponsView.vue'),
@@ -110,6 +116,12 @@ const routes = [
         name: 'AdminSendOrders',
         component: () => import('../views/admin/SendOrdersView.vue'),
         meta: { role: 'admin', title: '寄件订单' }
+      },
+      {
+        path: 'admin/coupons',
+        name: 'AdminCoupons',
+        component: () => import('../views/admin/AdminCouponCreateView.vue'),
+        meta: { role: 'admin', title: '红包礼券设置' }
       },
       {
         path: 'admin/notices',
