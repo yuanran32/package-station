@@ -1,0 +1,11 @@
+.gocache/
+*.log
+
+# Go build artifacts
+*.exe
+*.test
+coverage.out
+
+# Local environment files
+.env
+.env.local
